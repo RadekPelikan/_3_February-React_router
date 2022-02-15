@@ -1,11 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { MantineProvider } from "@mantine/core";
+import App from "./App";
+
+import "./css/index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MantineProvider theme={{ colorScheme: "dark" }} withGlobalStyles>
+      <App />
+    </MantineProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

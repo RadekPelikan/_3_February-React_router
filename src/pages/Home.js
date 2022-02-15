@@ -1,11 +1,10 @@
-import "./../App.css";
+import React from 'react'
+import { Title } from '@mantine/core'
 
-function Home() {
+const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
-  );
+    <Title order={1}>Home Page</Title>
+  )
 }
 
-export default Home;
+export default Home
