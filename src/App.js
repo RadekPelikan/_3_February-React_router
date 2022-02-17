@@ -13,8 +13,8 @@ import {
 import Nav from "./components/Nav";
 import "./css/App.css";
 
-import Home from "./pages/Home";
-import Presentation from "./pages/presentation/Presentation";
+import HomePage from "./pages/HomePage";
+import SlidePage from "./pages/SlidePage";
 import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
@@ -27,14 +27,14 @@ const App = () => {
         <Container>
           <Center>
             <Routes>
-              <Route exact index element={<Home />} />
+              <Route exact index element={<HomePage />} />
               <Route
                 path="/presentation"
                 element={<Navigate to="/presentation/1" />}
               />
 
               <Route path="/presentation">
-                <Route path=":slideId" element={<Presentation />} />
+                <Route path=":slideId" element={<SlidePage />} />
               </Route>
               <Route path="*" element={<ErrorPage />} />
             </Routes>
