@@ -1,12 +1,13 @@
 import React from "react";
 import { Title, Text } from "@mantine/core";
 
-const ErrorPage = () => {
+const ErrorPage = ({ err }) => {
+  const errMessage = err ?? "Not found 404"
   return (
     <>
       <Title order={1}>
         <Text color="red" inherit component="span">
-          Error 404
+          {errMessage}
         </Text>
       </Title>
     </>

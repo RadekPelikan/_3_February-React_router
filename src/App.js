@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Navigate,
-  Route,
-  Routes,
-} from "react-router-dom";
-import {
-  Container,
-  Center,
-  Space,
-} from "@mantine/core";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Container, Center, Space } from "@mantine/core";
 import Nav from "./components/Nav";
 import "./css/App.css";
 
@@ -20,27 +11,25 @@ import ErrorPage from "./pages/ErrorPage";
 const App = () => {
   return (
     <div className="App">
-      <Router>
-        <Nav />
+      <Nav />
 
-        <Space h="xl" />
-        <Container>
-          <Center>
-            <Routes>
-              <Route exact index element={<HomePage />} />
-              <Route
-                path="/presentation"
-                element={<Navigate to="/presentation/1" />}
-              />
+      <Space h="xl" />
+      <Container>
+        <Center>
+          <Routes>
+            <Route exact index element={<HomePage />} />
+            <Route
+              path="/presentation"
+              element={<Navigate to="/presentation/1" />}
+            />
 
-              <Route path="/presentation">
-                <Route path=":slideId" element={<SlidePage />} />
-              </Route>
-              <Route path="*" element={<ErrorPage />} />
-            </Routes>
-          </Center>
-        </Container>
-      </Router>
+            <Route path="/presentation">
+              <Route path=":slideId" element={<SlidePage />} />
+            </Route>
+            <Route path="*" element={<ErrorPage err="Not found 404"/>} />
+          </Routes>
+        </Center>
+      </Container>
     </div>
   );
 };
