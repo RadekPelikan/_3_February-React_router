@@ -1,11 +1,21 @@
-.nav-bar {
-  width: 80vw;
-  display: flex;
-  justify-content: space-around;
-  min-height: 8vh;
+body {
+  min-height: 100vh;
 }
 
-.nav-bar * {
-  text-decoration: none;
-  padding: .5em .5em;
+.App {
+  text-align: center;
 }
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-around
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+}
+
+
+/* LOL sis fakt myslel, že tady bude nějaké CSS? xdd hhihii opička */
