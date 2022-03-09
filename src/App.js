@@ -11,8 +11,10 @@ const App = () => {
       <Routes>
         <Route exact index element={<HomePage />} />
 
-        <Route path="/user" element={<Navigate to="/" />} />
-        <Route path="/user/:id" element={<UserPage />} />
+        <Route exact path="user" element={<Navigate to="/" />} />
+        <Route path="user">
+          <Route path=":id" element={<UserPage />} />
+        </Route>
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
