@@ -5,16 +5,21 @@ import { NavBar, BottomNavBar } from "./components";
 import "./css/App.css";
 
 const App = () => {
+  const index = "_3_February-React_router";
   return (
     <div className="App">
-      <NavBar />
+      <NavBar index={index} />
       <Routes>
-        <Route exact index element={<HomePage />} />
+        <Route exact path={index} element={<HomePage />} />
+        <Route path={index}>
+          
+          <Route exact path="user" element={<Navigate to={index} />} />
+          <Route path="user">
+            <Route path=":id" element={<UserPage />} />
+          </Route>
 
-        <Route path="/user" element={<Navigate to="/" />} />
-        <Route path="/user/:id" element={<UserPage />} />
-
-        <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
       </Routes>
       <BottomNavBar />
     </div>
