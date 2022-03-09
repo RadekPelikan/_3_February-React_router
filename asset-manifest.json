@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/_3_February-React_router/static/css/main.88e16fc7.css",
+    "main.js": "/_3_February-React_router/static/js/main.112000b3.js",
+    "index.html": "/_3_February-React_router/index.html",
+    "main.88e16fc7.css.map": "/_3_February-React_router/static/css/main.88e16fc7.css.map",
+    "main.112000b3.js.map": "/_3_February-React_router/static/js/main.112000b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88e16fc7.css",
+    "static/js/main.112000b3.js"
+  ]
+}
